@@ -26,6 +26,10 @@ class Module extends BaseModule implements BootstrapInterface
      */
     public function bootstrap($app)
     {
+        if ($app instanceof \yii\web\Application) {
+            $app->getUrlManager()->addRules(require __DIR__ . '/config/routes.php');
+        }
+    
         require __DIR__ . '/config/di.php';
     }
 }
