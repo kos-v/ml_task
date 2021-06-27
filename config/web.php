@@ -50,6 +50,11 @@ $config = [
             ],
         ],
     ],
+    'modules' => [
+        'shortLink' => [
+            'class' => 'app\modules\shortLink\Module',
+        ],
+    ],
     'params' => $params,
 ];
 
