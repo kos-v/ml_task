@@ -3,6 +3,7 @@
 namespace app\modules\shortLink\controllers\api\v1;
 
 use Yii;
+use app\modules\shortLink\controllers\api\BaseController;
 use yii\helpers\Url;
 use yii\web\Response;
 

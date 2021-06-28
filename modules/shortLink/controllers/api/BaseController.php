@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\shortLink\controllers\api\v1;
+namespace app\modules\shortLink\controllers\api;
 
 use Yii;
 use app\modules\shortLink\ContainerTrait;
