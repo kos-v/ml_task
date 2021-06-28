@@ -38,9 +38,10 @@ class ShortLink extends ActiveRecord
     {
         return [
             [['uid', 'link'], 'required'],
-            [['link'], 'string'],
-            [['uid'], 'string', 'max' => 255],
-            [['uid'], 'unique'],
+            ['uid', 'string', 'max' => 255],
+            ['uid', 'unique'],
+            ['link', 'string', 'max' => 2048],
+            ['link', 'url'],
         ];
     }
     
