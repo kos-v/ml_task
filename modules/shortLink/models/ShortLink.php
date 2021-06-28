@@ -9,6 +9,7 @@ use yii\db\ActiveRecord;
  *
  * @property string $uid
  * @property string $link
+ * @property integer $openings_count
  */
 class ShortLink extends ActiveRecord
 {
@@ -20,6 +21,7 @@ class ShortLink extends ActiveRecord
         return [
             'uid' => 'Uid',
             'link' => 'Link',
+            'openings_count' => 'Openings count',
         ];
     }
     
@@ -42,6 +44,8 @@ class ShortLink extends ActiveRecord
             ['uid', 'unique'],
             ['link', 'string', 'max' => 2048],
             ['link', 'url'],
+            ['openings_count', 'integer'],
+            ['openings_count', 'default', 'value' => 0],
         ];
     }
     

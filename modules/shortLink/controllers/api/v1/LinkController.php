@@ -18,7 +18,7 @@ class LinkController extends BaseController
         
         return $this->response([
             'originalLink' => $shortLink->link,
-            'openingsCount' => 0,
+            'openingsCount' => $shortLink->openings_count,
         ]);
     }
     
